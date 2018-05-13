@@ -1,0 +1,28 @@
+{
+  "name": "koa-faerun",
+  "homepage": "https://github.com/hsalmeida/koa-faerun",
+  "authors": [
+    "hsalmeida <hsalmeida@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-touch": "^1.6.8",
+    "angular-sanitize": "^1.6.9",
+    "angular-aria": "^1.6.9",
+    "angular-messages": "^1.6.9",
+    "angular-i18n": "^1.6.9",
+    "angular-ui-router": "^1.0.15",
+    "font-awesome": "^4.7.0",
+    "angular-material": "^1.1.9",
+    "jquery": "^3.3.1",
+    "moment": "^2.20.1",
+    "angular-filter": "^0.5.16",
+    "angular-moment": "^1.2.0",
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.1"
+  }
+}
