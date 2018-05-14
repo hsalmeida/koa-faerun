@@ -1,0 +1,21 @@
+<div ng-cloak>
+    <md-button class="md-raised md-primary" ng-click="addPerson();">
+        <md-icon class="material-icons">person_add</md-icon>&nbsp;Criar novo
+    </md-button>
+    <dir-pagination-controls pagination-id="characterList"></dir-pagination-controls>
+    <md-card pagination-id="characterList" dir-paginate="character in vm.characters | itemsPerPage: 20 : 'characterList'">
+
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">{{character.name}}</span>
+                <span class="md-subhead">fei/5 mng/4 brd/4</span>
+            </md-card-header-text>
+        </md-card-header>
+
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button>Ver</md-button>
+            <md-button>Administrar</md-button>
+        </md-card-actions>
+    </md-card>
+    <dir-pagination-controls pagination-id="characterList"></dir-pagination-controls>
+</div>

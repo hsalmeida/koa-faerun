@@ -2,16 +2,15 @@
     <md-card ng-repeat="combate in vm.combates">
         <md-card-title>
             <md-card-title-text>
-                <span class="md-headline">Combate: {{combate.numero}}</span>
-                <span class="md-subhead">Small</span>
+                <span class="md-headline">{{combate.tipo}}: {{combate.numero}}</span>
+                <span class="md-subhead">
+                    <md-progress-linear md-mode="determinate" value="{{combate.concluido}}"></md-progress-linear>
+                </span>
             </md-card-title-text>
-            <md-card-title-media>
-                <div class="md-media-sm card-media"></div>
-            </md-card-title-media>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-            <md-button>Action 1</md-button>
-            <md-button>Action 2</md-button>
+            <md-button>Ver</md-button>
+            <md-button>Administrar</md-button>
         </md-card-actions>
     </md-card>
 </div>

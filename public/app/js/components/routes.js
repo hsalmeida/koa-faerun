@@ -19,5 +19,18 @@ angular.module("koa-fearun").config(function ($stateProvider, $urlRouterProvider
             templateUrl: 'public/partials/home.html',
             controller: 'HomeController',
             controllerAs: 'vm'
+        })
+        .state('workspace.personagens', {
+            url: '/personagens',
+            templateUrl: 'public/partials/personagens.html',
+            controller: 'PersonagensController',
+            controllerAs: 'vm'
+        })
+        .state('workspace.character', {
+            url: '/personagen/:add/:id',
+            templateUrl: 'public/partials/personagen.html',
+            controller: 'PersonagenController',
+            controllerAs: 'vm'
         });
+
 });

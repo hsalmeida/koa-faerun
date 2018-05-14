@@ -1,0 +1,20 @@
+<div ng-cloak>
+    <md-button class="md-raised md-primary" ng-if="add" ng-click="generateCharacter();">
+        <md-icon class="material-icons">supervisor_account</md-icon>&nbsp;Gerar aleatorio
+    </md-button>
+    <md-card>
+        <md-card-header>
+            <md-card-header-text>
+                <span class="md-title">{{vm.character.name}}</span>
+                <span class="md-subhead">{{vm.character.race}} <span ng-repeat="cl in vm.character.classes">&nbsp;{{cl.cl.nome}}/{{cl.qtd}}</span></span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button>Ver</md-button>
+            <md-button>Administrar</md-button>
+        </md-card-actions>
+    </md-card>
+</div>
