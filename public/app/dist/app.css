@@ -1,3 +1,48 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.character-ability-item {
+    border-bottom: 1px solid #edeae8;
+    padding: 8px 5px;
+    vertical-align: middle;
+}
+
+.character-ability-strength .character-ability-icon-img {
+    background-image: url(img/strength.svg);
+}
+
+.character-ability-dexterity .character-ability-icon-img {
+    background-image: url(img/dexterity.svg);
+}
+
+.character-ability-constitution .character-ability-icon-img {
+    background-image: url(img/constitution.svg);
+}
+
+.character-ability-intelligence .character-ability-icon-img {
+    background-image: url(img/intelligence.svg);
+}
+
+.character-ability-wisdom .character-ability-icon-img {
+    background-image: url(img/wisdom.svg);
+}
+
+.character-ability-charisma .character-ability-icon-img {
+    background-image: url(img/charisma.svg);
+}
+
+.character-ability-icon-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background: center center transparent url(img/strength.svg) no-repeat;
+    background-size: 20px;
+}
+
 .main-view {
     height: 100%;
 }

@@ -28,13 +28,15 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         };
         vm.character.level = getRandomInt(6, 16);
 
+        vm.character.appearance = Tables.aparencia[getRandomInt(0, (Tables.aparencia.length - 1))];
+        vm.character.maneirism = Tables.maneirism[getRandomInt(0, (Tables.maneirism.length - 1))];
+
         vm.character.strength = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.dexterity = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.constitution = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.intelligence = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.wisdom = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.charisma = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-
 
         vm.character.gender = getRandomInt(0, 2) === 0 ? "M" : "F";
         const racas = Tables.racas;
@@ -84,6 +86,18 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
                 vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
             }
         }
+
+        const qtdI = getRandomInt(1, 3);
+        for(let z = 1; z <= qtdI; z ++) {
+            let tabela = getRandomInt(0, 8);
+            let coluna = getRandomInt(0, 3);
+
+            let listaItem = Tables.magItens[tabela][coluna];
+            let itStr = listaItem[getRandomInt(0, (listaItem.length - 1))];
+            let it = Tables.items[tabela];
+            vm.character.items.push({tabela: it.tabela, poder: it.valores[coluna], nome: itStr});
+        }
+
     };
 
     function getRandomInt(min, max) {
