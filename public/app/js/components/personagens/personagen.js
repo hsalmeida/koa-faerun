@@ -22,6 +22,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             wisdomModifier: 0,
             charismaModifier: 0,
             classes: [],
+            primaryClass: '',
             appearance: '',
             maneirism: '',
             items: []
@@ -83,6 +84,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
                     vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
                 }
             } else {
+                vm.character.primaryClass = classesList[clget].name;
                 vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
             }
         }

@@ -23,19 +23,19 @@ angular.module("koa-fearun").factory('Tables', function () {
                 nome: "Elfo Drow", attrs: [{at: "dexterity", bn: 2}, {at: "charisma", bn: 1}],
                 M: ["Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis"],
                 F: ["Adrie", "Althaea", "Anastrianna", "Andraste", "Antinua", "Bethrynna", "Birel", "Caelynn", "Drusilia", "Enna", "Felosial", "Ielenia", "Jelenneth", "Keyleth", "Leshanna", "Lia", "Meriele", "Mialee", "Naivara", "Quelenna", "Quillathe", "Sariel", "Shanairra", "Shava", "Silaqui", "Theirastra", "Thia", "Vadania", "Valanthe", "Xanaphia"],
-                sur: ["Amakiir (Gemflower)", "Amastacia (Starflower)", "Galanodel (Moonwhisper)", "Holimion (Diamonddew)", "Ilphelkiir (Gemblossom)", "Liadon (Silverfrond)", "Meliamne (Oakenheel)", "Naïlo (Nightbreeze)", "Siannodel (Moonbrook)", "Xiloscient (Goldpetal)"]
+                sur: ["Amakiir", "Amastacia", "Galanodel", "Holimion", "Ilphelkiir", "Liadon", "Meliamne", "Naïlo", "Siannodel", "Xiloscient"]
             },
             {
                 nome: "Alto Elfo", attrs: [{at: "dexterity", bn: 2}, {at: "intelligence", bn: 1}],
                 M: ["Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis"],
                 F: ["Adrie", "Althaea", "Anastrianna", "Andraste", "Antinua", "Bethrynna", "Birel", "Caelynn", "Drusilia", "Enna", "Felosial", "Ielenia", "Jelenneth", "Keyleth", "Leshanna", "Lia", "Meriele", "Mialee", "Naivara", "Quelenna", "Quillathe", "Sariel", "Shanairra", "Shava", "Silaqui", "Theirastra", "Thia", "Vadania", "Valanthe", "Xanaphia"],
-                sur: ["Amakiir (Gemflower)", "Amastacia (Starflower)", "Galanodel (Moonwhisper)", "Holimion (Diamonddew)", "Ilphelkiir (Gemblossom)", "Liadon (Silverfrond)", "Meliamne (Oakenheel)", "Naïlo (Nightbreeze)", "Siannodel (Moonbrook)", "Xiloscient (Goldpetal)"]
+                sur: ["Amakiir", "Amastacia", "Galanodel", "Holimion", "Ilphelkiir", "Liadon", "Meliamne", "Naïlo", "Siannodel", "Xiloscient"]
             },
             {
                 nome: "Elfo Florestal", attrs: [{at: "dexterity", bn: 2}, {at: "wisdom", bn: 1}],
                 M: ["Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis"],
                 F: ["Adrie", "Althaea", "Anastrianna", "Andraste", "Antinua", "Bethrynna", "Birel", "Caelynn", "Drusilia", "Enna", "Felosial", "Ielenia", "Jelenneth", "Keyleth", "Leshanna", "Lia", "Meriele", "Mialee", "Naivara", "Quelenna", "Quillathe", "Sariel", "Shanairra", "Shava", "Silaqui", "Theirastra", "Thia", "Vadania", "Valanthe", "Xanaphia"],
-                sur: ["Amakiir (Gemflower)", "Amastacia (Starflower)", "Galanodel (Moonwhisper)", "Holimion (Diamonddew)", "Ilphelkiir (Gemblossom)", "Liadon (Silverfrond)", "Meliamne (Oakenheel)", "Naïlo (Nightbreeze)", "Siannodel (Moonbrook)", "Xiloscient (Goldpetal)"]
+                sur: ["Amakiir", "Amastacia", "Galanodel", "Holimion", "Ilphelkiir", "Liadon", "Meliamne", "Naïlo", "Siannodel", "Xiloscient"]
             },
             {
                 nome: "Gnomo Florestal", attrs: [{at: "intelligence", bn: 2}, {at: "dexterity", bn: 1}],
@@ -53,7 +53,7 @@ angular.module("koa-fearun").factory('Tables', function () {
                 nome: "Meio-Elfo", attrs: [{at: "charisma", bn: 2}, {at: "dexterity", bn: 1}, {at: "strength", bn: 1}],
                 M: ["Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis", "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis", "Paelias", "Peren", "Quarion", "Riardon", "Rolen", "Soveliss", "Thamior", "Tharivol", "Theren", "Varis", "Aseir", "Bardeid", "Haseid", "Khemed", "Mehmen", "Sudeiman", "Zasheir", "Darvin", "Dorn", "Evendur", "Gorstag", "Grim", "Helm", "Malark", "Morn", "Randal", "Stedd", "Bor", "Fodel", "Glar", "Grigor", "Igan", "Ivor", "Kosef", "Mival", "Orel", "Pavel", "Sergor", "Ander", "Blath", "Bran", "Frath", "Geth", "Lander", "Luth", "Malcer", "Stor", "Taman", "Urth", "Aoth", "Bareris", "Ehput-Ki", "Kethoth", "Mumed", "Ramas", "So-Kehur", "Thazar-De", "Urhur"],
                 F: ["Atala", "Ceidil", "Hama", "Jasmal", "Meilil", "Seipora", "Yasheira", "Zasheida", "Arveene", "Esvele", "Jhessail", "Kerri", "Lureene", "Miri", "Rowan", "Shandri", "Tessele", "Alethra", "Kara", "Katernin", "Mara", "Natali", "Olma", "Tana", "Zora", "Amafrey", "Betha", "Cefrey", "Kethra", "Mara", "Olga", "Silifrey", "Westra", "Arizima", "Chathi", "Nephis", "Nulara", "Murithi", "Sefris", "Thola", "Umara", "Zolis", "Adrie", "Althaea", "Anastrianna", "Andraste", "Antinua", "Bethrynna", "Birel", "Caelynn", "Drusilia", "Enna", "Felosial", "Ielenia", "Jelenneth", "Keyleth", "Leshanna", "Lia", "Meriele", "Mialee", "Naivara", "Quelenna", "Quillathe", "Sariel", "Shanairra", "Shava", "Silaqui", "Theirastra", "Thia", "Vadania", "Valanthe", "Xanaphia"],
-                sur: ["Amakiir (Gemflower)", "Amastacia (Starflower)", "Galanodel (Moonwhisper)", "Holimion (Diamonddew)", "Ilphelkiir (Gemblossom)", "Liadon (Silverfrond)", "Meliamne (Oakenheel)", "Naïlo (Nightbreeze)", "Siannodel (Moonbrook)", "Xiloscient (Goldpetal)", "Basha", "Dumein", "Jassan", "Khalid", "Mostana", "Pashar", "Rein", "Amblecrown", "Buckman", "Dundragon", "Evenwood", "Greycastle", "Tallstag", "Bersk", "Chernin", "Dotsk", "Kulenov", "Marsk", "Nemetsk", "Shemov", "Starag", "Brightwood", "Helder", "Hornraven", "Lackman", "Stormwind", "Windrivver", "Ankhalab", "Anskuld", "Fezim", "Hahpet", "Nathandem", "Sepret", "Uuthrakt"]
+                sur: ["Amakiir", "Amastacia", "Galanodel", "Holimion", "Ilphelkiir", "Liadon", "Meliamne", "Naïlo", "Siannodel", "Xiloscient", "Basha", "Dumein", "Jassan", "Khalid", "Mostana", "Pashar", "Rein", "Amblecrown", "Buckman", "Dundragon", "Evenwood", "Greycastle", "Tallstag", "Bersk", "Chernin", "Dotsk", "Kulenov", "Marsk", "Nemetsk", "Shemov", "Starag", "Brightwood", "Helder", "Hornraven", "Lackman", "Stormwind", "Windrivver", "Ankhalab", "Anskuld", "Fezim", "Hahpet", "Nathandem", "Sepret", "Uuthrakt"]
             },
             {
                 nome: "Meio-Orc", attrs: [{at: "strength", bn: 2}, {at: "constitution", bn: 1}],
@@ -89,18 +89,18 @@ angular.module("koa-fearun").factory('Tables', function () {
         aparencia: ["Jóias distintivas: brincos, colar, argola, pulseiras", "Piercings", "Roupas extravagantes ou extravagante", "Roupa formal e limpa", "Roupas sujas e esfarrapadas", "Cicatriz pronunciada", "Dentes perdidos", "Dedos faltando", "Cor dos olhos incomum (ou duas cores diferentes)", "Tatuagens", "Marca de nascença", "Cor da pele incomum", "Careca", "Barba ou cabelo trançado", "Cor do cabelo incomum", "Contração do olho nervoso", "Nariz distintivo", "Postura distintiva (torta ou rígida)", "Excepcionalmente bonito", "Excepcionalmente feio"],
         maneirism: ["Propenso a cantar, assobiar ou cantarolar baixinho", "Fala em rima ou alguma outra maneira peculiar", "Particularmente baixa ou alta voz", "Insulta palavras, bate na língua ou gagueja", "Enuncia claramente demais", "Fala alto", "Sussurros", "Usa discurso florido ou palavras longas", "Frequentemente usa a palavra errada", "Usa juramentos e exclamações coloridas", "Faz piadas constantes ou trocadilhos", "Propenso a previsões de desgraça", "Inquietas", "Estrabismo", "Olha para a distância", "Mastiga algo", "Toca os dedos", "Morde as unhas", "Torce o cabelo ou puxa barba"],
         classes: {
-            1: {nome: "Barbaro", atributos: ["strength"], dv: 12, mdv: 4},
-            2: {nome: "Bardo", atributos: ["charisma"], dv: 8, mdv: 2},
-            3: {nome: "Bruxo", atributos: ["charisma"], dv: 8, mdv: 2},
-            4: {nome: "Clerigo", atributos: ["wisdom"], dv: 8, mdv: 2},
-            5: {nome: "Druida", atributos: ["wisdom"], dv: 8, mdv: 2},
-            6: {nome: "Feiticeiro", atributos: ["charisma"], dv: 6, mdv: 1},
-            7: {nome: "Guerreiro", atributos: ["strength"], dv: 10, mdv: 3},
-            8: {nome: "Ladino", atributos: ["dexterity"], dv: 8, mdv: 2},
-            9: {nome: "Mago", atributos: ["intelligence"], dv: 6, mdv: 1},
-            10: {nome: "Monge", atributos: ["dexterity", "wisdom"], dv: 8, mdv: 2},
-            11: {nome: "Paladino", atributos: ["strength", "charisma"], dv: 10, mdv: 2},
-            12: {nome: "Ranger", atributos: ["dexterity", "wisdom"], dv: 10, mdv: 2}
+            1: {name: 'barbarian', nome: "Barbaro", atributos: ["strength"], dv: 12, mdv: 4},
+            2: {name: 'bard', nome: "Bardo", atributos: ["charisma"], dv: 8, mdv: 2},
+            3: {name: 'warlock', nome: "Bruxo", atributos: ["charisma"], dv: 8, mdv: 2},
+            4: {name: 'cleric', nome: "Clerigo", atributos: ["wisdom"], dv: 8, mdv: 2},
+            5: {name: 'druid', nome: "Druida", atributos: ["wisdom"], dv: 8, mdv: 2},
+            6: {name: 'sorcerer', nome: "Feiticeiro", atributos: ["charisma"], dv: 6, mdv: 1},
+            7: {name: 'figher', nome: "Guerreiro", atributos: ["strength"], dv: 10, mdv: 3},
+            8: {name: 'rogue', nome: "Ladino", atributos: ["dexterity"], dv: 8, mdv: 2},
+            9: {name: 'mage', nome: "Mago", atributos: ["intelligence"], dv: 6, mdv: 1},
+            10: {name: 'monk', nome: "Monge", atributos: ["dexterity", "wisdom"], dv: 8, mdv: 2},
+            11: {name: 'paladin', nome: "Paladino", atributos: ["strength", "charisma"], dv: 10, mdv: 2},
+            12: {name: 'ranger', nome: "Ranger", atributos: ["dexterity", "wisdom"], dv: 10, mdv: 2}
         },
         items: [
             {tabela: "a", valores: [1, 1, 1, 1]},

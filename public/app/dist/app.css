@@ -43,6 +43,10 @@ table {
     background-size: 20px;
 }
 
+.character-avatar {
+    border-radius: 50%;
+}
+
 .main-view {
     height: 100%;
 }

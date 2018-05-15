@@ -5,6 +5,7 @@ angular.module("koa-fearun").controller('PersonagensController', ['$scope', '$st
         vm.characters.push({
             name: 'Exemplo de Personagem ' + i,
             race: 'Dragonborn',
+            primaryClass: '',
             level: 0,
             strength: 0,
             dexterity: 0,
