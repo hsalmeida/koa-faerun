@@ -247,12 +247,6 @@ angular.module("koa-fearun").controller('HomeController', ['$scope', function ($
         concluido: 0
     });
 }]);
-angular.module("koa-fearun").controller('LoginController', ['$scope','$state', function ($scope, $state) {
-    let vm = this;
-    vm.submit = function(login) {
-        $state.go('workspace.home')
-    };
-}]);
 angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$state', '$stateParams', 'Tables', function ($scope, $state, $stateParams, Tables) {
     let vm = this;
     vm.character = {};
@@ -280,7 +274,9 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             primaryClass: '',
             appearance: '',
             maneirism: '',
-            items: []
+            items: [],
+            power: 0,
+            hp: 0
         };
         vm.character.level = getRandomInt(6, 17);
 
@@ -364,6 +360,47 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             vm.character.items.push({tabela: it.tabela, poder: it.valores[coluna], nome: itStr});
         }
 
+        vm.character.power += (Tables.lvs[(vm.character.level - 6)].mod +
+            vm.character.strengthModifier +
+            vm.character.dexterityModifier +
+            vm.character.constitutionModifier +
+            vm.character.intelligenceModifier +
+            vm.character.wisdomModifier +
+            vm.character.charismaModifier);
+
+        const attrs = vm.character.classes[0].cl.atributos;
+        for(let a = 0; a < attrs.length; a++) {
+            vm.character.power += vm.character[attrs[a] + 'Modifier'];
+        }
+
+
+        let templv = 1;
+        let tempclmod = 0;
+        vm.character.hp = 0;
+        for(let i = 0; i < vm.character.classes.length; i++) {
+            for(let b = 0; b < vm.character.classes[i].qtd; b++) {
+                tempclmod += vm.character.classes[i].cl.mdv;
+                if(templv === 1 || templv === 5 || templv === 10 || templv === 15) {
+                    vm.character.hp += vm.character.classes[i].cl.dv;
+                } else {
+                    let min = Math.floor(vm.character.classes[i].cl.dv / 2);
+                    vm.character.hp += getRandomInt(min, (vm.character.classes[i].cl.dv + 1));
+                }
+                templv++;
+            }
+        }
+
+        vm.character.hp += (vm.character.constitutionModifier * vm.character.level);
+        vm.character.power += Math.floor(tempclmod / vm.character.level);
+
+        for(let j = 0; j < vm.character.items.length; j++) {
+            vm.character.power += vm.character.items[j].poder;
+        }
+
+    };
+
+    $scope.saveCharacter = function () {
+
     };
 
     function getRandomInt(min, max) {
@@ -401,6 +438,12 @@ angular.module("koa-fearun").controller('PersonagensController', ['$scope', '$st
     }
     $scope.addPerson = function () {
         $state.go('workspace.character', {add: true, id: 0})
+    };
+}]);
+angular.module("koa-fearun").controller('LoginController', ['$scope','$state', function ($scope, $state) {
+    let vm = this;
+    vm.submit = function(login) {
+        $state.go('workspace.home')
     };
 }]);
 angular.module("koa-fearun")

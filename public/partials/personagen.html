@@ -1,16 +1,21 @@
 <div ng-cloak>
+    <div layout="row">
     <md-button class="md-raised md-primary" ng-if="add" ng-click="generateCharacter();">
         <md-icon class="material-icons">supervisor_account</md-icon>&nbsp;Gerar aleatorio
     </md-button>
+    <md-button class="md-raised md-primary" ng-if="vm.character.name" ng-click="saveCharacter();" ng-disabled="true">
+        <md-icon class="material-icons">save</md-icon>&nbsp;Salvar
+    </md-button>
+    </div>
     <md-card>
         <md-card-header>
             <!--md-card-avatar ng-if="vm.character.primaryClass">
                 <img ng-src="public/app/dist/img/{{vm.character.primaryClass}}.jpeg" class="md-avatar character-avatar" alt="{{vm.character.name}}"/>
             </md-card-avatar-->
             <md-card-header-text layout="column">
-                <span class="md-title">{{vm.character.name}}</span>
+                <span class="md-title">{{vm.character.name}} [{{vm.character.hp}}]</span>
                 <span class="md-subhead">
-                    <p>{{vm.character.race}} {{vm.character.gender === 'F' ? 'Feminino' : 'Masculino'}} Nivel: {{vm.character.level}}</p>
+                    <p>{{vm.character.race}} {{vm.character.gender === 'F' ? 'Feminino' : 'Masculino'}} Nivel: {{vm.character.level}} [{{vm.character.power}}]</p>
                     <span>
                         <span ng-repeat="cl in vm.character.classes"><span ng-if="!$first">&nbsp;</span>{{cl.cl.nome}}/{{cl.qtd}}</span>
                     </span>
