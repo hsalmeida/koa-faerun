@@ -164,16 +164,22 @@ angular.module("koa-fearun").factory('Tables', function () {
                 ["Instrument of the bards (Mac-Fuimidh cittern)", "Medallion of thoughts", "Necklace of adaptation", "Periapt of wound closure", "Pipes of haunting", "Pipes of the sewers", "Ring of jumping", "Ring of mind shielding", "Ring of warmth", "Ring of water walking", "Quiver of Ehlonna", "Stone of good luck", "Wind fan", "Winged boots"]
             ],
             [
-                ["Weapon, +2", "Figurine of wondrous power (roll d8)", "Bronze griffon", "Ebony fly", "Golden lions", "Ivory goats", "Marble elephant", "Onyx dog", "Serpentine owl", "Adamantine armor (breastplate)", "Adamantine armor (splint)", "Amulet of health", "Armor of vulnerability", "Arrow-catching shield", "Belt of dwarvenkind", "Belt of hill giant st rength", "Berserker axe", "Boots of levitation", "Boots of speed", "Bowl of commanding water elementals", "Bracers of defense", "Brazier of commanding fire elementals", "Cape of the mountebank", "Censer of controlling air elementals", "Armor, +1 chain mail", "Armor of resistance (chain mail)", "Armor,+ 1 chain shirt", "Armor of resistance (chain shirt)", "Cloak of displacement"],
-                ["Cloak of the bat", "Cube afforce", "Daern's instant fortress", "Dagger of venom", "Dimensional shackles", "Dragon slayer", "Elven chain", "Flame tongue", "Gem of seeing", "Giant slayer", "Clamoured studded leather", "Helm of teleportation", "Horn of blasting", "Horn of Valhalla (silver or brass)", "Instrument of the bards (Canaith mandolin)", "Instrument ofthe bards (Cii lyre)", "loun stone (awareness)", "loun stone (protection)", "loun stone (reserve)", "loun stone (sustenance)", "Iron bands of Bilarro", "Armor, + 1 leatherMAGIC ITEM TABLE H", "Armor of resistance (leather)Weapon, +3", "Mace of disruptionAmulet of the planes", "Mace of smitingCarpet of flying", "Mace of terrorCrystal ball (very rare version)", "Mantle of spell resistanceRing of regeneration", "Necklace of prayer beadsRing of shooting stars", "Periapt of proof against poisonRing of telekinesis", "Ring of animal influenceRobe of scintillating colors", "Ring of evasionRobe of stars", "Ring of feather fallingRod of absorption", "Ring of free actionRod of alertness", "Ring of protectionRod of security", "Ring of resistanceRod of the pact keeper, +3", "Ring of spell storingScimitar of speed", "Ring of the ramShield, +3", "Ring of X-ray visionStaff of fire", "Robe of eyesStaff of frost"],
-                ["Rod of rulership","Staff of power", "Rod of the pact keeper +2", "Staff of striking", "Rope of entanglement", "Staff of thunder and lightning", "Armor, +1 scale mail", "Sword of sharpness", "Armor of resistance (scale mail)", "Wand of polymorph", "Shield, +2", "Wand of the war mage, +3", "Shield of missile attraction", "Adamantine armor (half plate)", "Staff of charming", "Adamantine armor (plate)", "Staff of healing", "Animated shield", "Staff of swarming insects", "Belt of fire giant strength", "Staff of the woodlands","Belt of frost (or stone) giant strength", "Staff of withering", "Armor, + 1 breastplate", "Stone of controlling earth elementals", "Armor of resistance (breastplate)", "Sun blade", "Candle of invocation", "Sword of life stealing", "Armor, +2 chainmail", "Sword of wounding", "Armor, +2 chain shirt", "Tentacle rod", "Cloak of arachnida", "Vicious weapon", "Dancing sword", "Wand of binding", "Demon armor", "Wand of enemy detection", "Dragon scale mail", "Wand of fear", "Dwarven plate"],
-                ["Wand of fireballs", "Dwarven thrower", "Wand of lightning bolts", "Efreeti bottle", "Wand of paralysis", "Figurine of wondrous power (obsidian steed)", "Wand of the war mage, +2", "Frost brand", "Wand of wonder", "Helm of brilliance", "Wings of flying", "Horn of Valhalla (bronze)", "Instrument of the bards (Anstruth harp)", "loun stone (absorption)", "loun stone (agility)", "loun stone (fortitude)", "loun stone (insight)", "loun stone (intellect)", "loun stone (leadership)", "loun stone (strength)", "Armor, +2 leather", "Manual of bodily health", "Manual of gainful exercise", "Manual of golems", "Manual of quickness of action", "Mirror of life trapping", "Nine li ves stealer", "Oath bow", "Armor, +2 scale mail", "Spellguard shield", "Armor, + 1 splint", "Armor of res istance (splint)", "Armor, + 1 studded leather", "Armor of resistance (studded leather)", "Tome of clear thought", "Tome of leadership and influence", "Tome of understanding"]
+                ["Weapon, +2","Figurine of wondrous power Bronze griffon","Figurine of wondrous power Ebony fly","Figurine of wondrous power Golden lions","Figurine of wondrous power Ivory goats","Figurine of wondrous power Marble elephant","Figurine of wondrous power Onyx dog","Serpentine owl","Adamantine armor (breastplate)","Adamantine armor (splint)","Amulet of health","Armor of vulnerability","Arrow-catching shield","Belt of dwarvenkind","Belt of hill giant strength","Berserker axe","Boots of levitation","Boots of speed","Bowl of commanding water elementals","Bracers of defense","Brazier of commanding fire elementals","Cape of the mountebank","Censer of controlling air elementals","Armor, +1 chain mail"],
+                ["Armor of resistance (chain mail)","Armor,+ 1 chain shirt","Armor of resistance (chain shirt)","Cloak of displacement","Cloak of the bat","Cube afforce","Daern's instant fortress","Dagger of venom","Dimensional shackles","Dragon slayer","Elven chain","Flame tongue","Gem of seeing","Giant slayer","Clamoured studded leather","Helm of teleportation","Horn of blasting","Horn of Valhalla (silver or brass)","Instrument of the bards (Canaith mandolin)","Instrument ofthe bards (Cii lyre)","loun stone (awareness)","loun stone (protection)","loun stone (reserve) ","loun stone (sustenance)"],
+                ["Iron bands of Bilarro","Armor, + 1 leather","Armor of resistance (leather)","Mace of disruption","Mace of smiting","Mace of terror","Mantle of spell resistance","Necklace of prayer beads","Peri apt of proof against poison","Ring of animal influence","Ring of evasion","Ring of feather falling","Ring of free action","Ring of protection","Ring of resistance","Ring of spell storing","Ring of the ram","Ring of X-ray vision","Robe of eyes","Rod of rulership","Rod of the pact keeper, +2","Rope of entanglement","Armor, +1 scale mail"],
+                ["Armor of resistance (scale mail)","Shield, +2","Shield of missile attraction","Staff of charming","Staff of healing","Staff of swarming insects","Staff of the woodlands","Staff of withering","Stone of controlling earth elementals","Sun blade","Sword of life stealing","Sword of wounding","Tentacle rod","Vicious weapon","Wand of binding","Wand of enemy detection","Wand of fear","Wand of fireballs","Wand of lightning bolts","Wand of paralysis","Wand of the war mage, +2","Wand of wonder","Wings of flying"]
             ],
             [
-                ["Defender", "Hammer of thunderbolts", "Luck blade", "Sword of answering", "Holy avenger", "Ring of djinni summoning", "Ring of invisibility", "Ring of spell turning", "Rod of lordly might", "Staff of the magi", "Vorpal sword", "Belt of cloud giant strength", "Armor, +2 breastplate", "Armor, +3 chain mail", "Armor, +3 chain shirt", "Cloak of invisibility", "Crystal ball (legendary version)"],
-                ["Armor, + 1 half plate", "Iron flask", "Armor, +3 leather", "Armor, +1 plate", "Robe of the archmagi", "Rod of resurrection", "Armor, +1 scale mail", "Scarab of protection", "Armor, +2 splint", "Armor, +2 studded leather", "Well of many worlds", "Armor, +2 half plate", "Armor, +2 plate", "Armor, +3 studded leather", "Armor, +3 breastplate", "Armor, +3 splint", "Armor, +3 half plate"],
-                ["Armor, +3 plate", "Magic Item", "Apparatus of Kwalish", "Armor of invulnerability", "Belt of storm giant strength", "Cubic gate", "Deck of many things", "Efreeti chain", "Armor of resistance (half plate)", "Horn ofValhalla (iron)", "Instrument of the bards (OIIamh harp)", "loun stone (greater absorption)", "loun stone (mastery)", "loun stone (regeneration)", "Plate armor of etherealness"],
-                ["Plate armor of resistance", "Ring of air elemental command", "Ring of earth elemental command", "Ring of fire elemental command", "Ring of three wishes", "Ring of water elemental command", "Sphere of annihilation", "Talisman of pure good", "Talisman of the sphere", "Talisman of ultimate evil", "Tome of the stilled tongue"]
+                ["Weapon, +3","Amulet of the planes","Carpet of flying","Crystal ball (very rare version)","Ring of regeneration","Ring of shooting stars","Ring of telekinesis","Robe of scintillating colors","Robe of stars","Rod of absorption","Rod of alertness","Rod of security","Rod of the pact keeper, +3","Scimitar of speed","Shield, +3","Staff of fire","Staff of frost"],
+                ["Staff of power","Staff of striking","Staff of thunder and lightning","Sword of sharpness","Wand of polymorph","Wand of the war mage, +3","Adamantine armor (half plate)","Adamantine armor (plate)","Animated shield","Belt of fire giant strength","Belt of frost (or stone) giant strength","Armor, + 1 breastplate","Armor of resistance (breastplate)","Candle of invocation","Armor, +2 chain mail","Armor, +2 chain shirt"],
+                ["Cloak of arachnida","Dancing sword","Demon armor","Dragon scale mail","Dwarven plate","Dwarven thrower","Efreeti bottle","Figurine of wondrous power (obsidian steed)","Frost brand","Helm of brilliance","Horn ofValhalla (bronze)","Instrument of the bards (Anstruth harp)","loun stone (absorption)","loun stone (agility)","loun stone (fortitude)","loun stone (insight)","loun stone (intellect)","loun stone (leadership)"],
+                ["loun stone (strength)","Armor, +2 leather","Manual of bodily health","Manual of gainful exercise","Manual of golems","Manual of quickness of action","Mirror of life trapping","Nine li ves stealer","Oath bow","Armor, +2 scale mail","Spellguard shield","Armor, + 1 splint","Armor of resistance (splint)","Armor, + 1 studded leather","Armor of resistance (studded leather)","Tome of clear thought","Tome of leadership and influence","Tome of understanding"]
+            ],
+            [
+                ["Defender","Hammer of thunderbolts","Luck blade","Sword of answering","Holy avenger","Ring of djinni summoning","Ring of invisibility","Ring of spell turning","Rod of lordly might","Staff of the magi","Vorpal sword","Belt of cloud giant strength","Armor, +2 breastplate","Armor, +3 chain mail","Armor, +3 chain shirt","Cloak of invisibility"],
+                ["Crystal ball (legendary version)","Armor, + 1 half plate","Iron flask","Armor, +3 leather","Armor, +1 plate","Robe of the archmagi","Rod of resurrection","Armor, +1 scale mail","Scarab of protection","Armor, +2 splint","Armor, +2 studded leather","Well of many worlds","Armor, +2 half plate","Armor, +2 plate","Armor, +3 studded leather"],
+                ["Armor, +3 breastplate","Armor, +3 splint","Armor, +3 half plate","Armor, +3 plate","Apparatus of Kwalish","Armor of invulnerability","Belt of storm giant strength","Cubic gate","Deck of many things","Efreeti chain","Armor of resistance (half plate)","Horn ofValhalla (iron)","Instrument of the bards (OIIamh harp)","loun stone (greater absorption)","loun stone (mastery)"],
+                ["loun stone (regeneration)","Plate armor of etherealness","Plate armor of resistance","Ring of air elemental command","Ring of earth elemental command","Ring of fire elemental command","Ring of three wishes","Ring of water elemental command","Sphere of annihilation","Talisman of pure good","Talisman of the sphere","Talisman of ultimate evil","Tome of the stilled tongue"]
             ]
         ],
         lvs: [
@@ -276,17 +282,17 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             maneirism: '',
             items: []
         };
-        vm.character.level = getRandomInt(6, 16);
+        vm.character.level = getRandomInt(6, 17);
 
-        vm.character.appearance = Tables.aparencia[getRandomInt(0, (Tables.aparencia.length - 1))];
-        vm.character.maneirism = Tables.maneirism[getRandomInt(0, (Tables.maneirism.length - 1))];
+        vm.character.appearance = Tables.aparencia[getRandomInt(0, Tables.aparencia.length)];
+        vm.character.maneirism = Tables.maneirism[getRandomInt(0, Tables.maneirism.length)];
 
-        vm.character.strength = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-        vm.character.dexterity = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-        vm.character.constitution = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-        vm.character.intelligence = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-        vm.character.wisdom = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
-        vm.character.charisma = getRandomInt(8, 18) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.strength = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.dexterity = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.constitution = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.intelligence = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.wisdom = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
+        vm.character.charisma = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
 
         vm.character.gender = getRandomInt(0, 2) === 0 ? "M" : "F";
         const racas = Tables.racas;
@@ -294,14 +300,14 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         vm.character.race = tempraca.nome;
         vm.character.name = "";
         let names = tempraca[vm.character.gender];
-        if(names) {
+        if (names) {
             vm.character.name = names[getRandomInt(0, names.length)];
-            if(tempraca.sur && tempraca.sur.length > 0) {
-                vm.character.name += " " + tempraca.sur[getRandomInt(0,(tempraca.sur.length - 1))];
+            if (tempraca.sur && tempraca.sur.length > 0) {
+                vm.character.name += " " + tempraca.sur[getRandomInt(0, tempraca.sur.length)];
             }
         }
 
-        for(let q = 0; q < tempraca.attrs.length; q++) {
+        for (let q = 0; q < tempraca.attrs.length; q++) {
             vm.character[tempraca.attrs[q].at] += tempraca.attrs[q].bn;
         }
 
@@ -312,39 +318,48 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         vm.character.wisdomModifier = Math.floor((vm.character.wisdom - 10) / 2);
         vm.character.charismaModifier = Math.floor((vm.character.charisma - 10) / 2);
 
-        let sobra = vm.character.level;
         const classesList = Tables.classes;
-        while(sobra > 0) {
-            let lvrandom = getRandomInt(1, sobra);
-            sobra = sobra - lvrandom;
-            let clget = getRandomInt(1, 12);
-            if(vm.character.classes.length > 0) {
-                let have = false;
-                for (let j = 0; j < vm.character.classes.length; j++) {
-                    if(vm.character.classes[j]) {
-                        if(classesList[clget].nome === vm.character.classes[j].cl.nome) {
-                            vm.character.classes[j].qtd = vm.character.classes[j].qtd + lvrandom;
-                            have = true;
-                            break;
+        let singleClass = getRandomInt(1, 3) === 1;
+
+        if (singleClass) {
+            //classe unica
+            let clsingleget = getRandomInt(1, 13);
+            vm.character.primaryClass = classesList[clsingleget].name;
+            vm.character.classes.push({cl: classesList[clsingleget], qtd: vm.character.level});
+        } else {
+            //multiclasse
+            let sobra = vm.character.level;
+            while (sobra > 0) {
+                let lvrandom = getRandomInt(1, (sobra + 1));
+                sobra = sobra - lvrandom;
+                let clget = getRandomInt(1, 13);
+                if (vm.character.classes.length > 0) {
+                    let have = false;
+                    for (let j = 0; j < vm.character.classes.length; j++) {
+                        if (vm.character.classes[j]) {
+                            if (classesList[clget].nome === vm.character.classes[j].cl.nome) {
+                                vm.character.classes[j].qtd = vm.character.classes[j].qtd + lvrandom;
+                                have = true;
+                                break;
+                            }
                         }
                     }
-                }
-                if(!have) {
+                    if (!have) {
+                        vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
+                    }
+                } else {
+                    vm.character.primaryClass = classesList[clget].name;
                     vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
                 }
-            } else {
-                vm.character.primaryClass = classesList[clget].name;
-                vm.character.classes.push({cl: classesList[clget], qtd: lvrandom});
             }
         }
 
-        const qtdI = getRandomInt(1, 3);
-        for(let z = 1; z <= qtdI; z ++) {
-            let tabela = getRandomInt(0, 8);
-            let coluna = getRandomInt(0, 3);
-
+        const qtdI = getRandomInt(1, 4);
+        for (let z = 1; z <= qtdI; z++) {
+            let tabela = getRandomInt(0, 9);
+            let coluna = getRandomInt(0, 4);
             let listaItem = Tables.magItens[tabela][coluna];
-            let itStr = listaItem[getRandomInt(0, (listaItem.length - 1))];
+            let itStr = listaItem[getRandomInt(0, listaItem.length)];
             let it = Tables.items[tabela];
             vm.character.items.push({tabela: it.tabela, poder: it.valores[coluna], nome: itStr});
         }
