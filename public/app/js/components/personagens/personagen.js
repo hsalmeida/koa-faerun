@@ -4,7 +4,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
     $scope.newChar = false;
     $scope.addNew = $stateParams.add;
 
-    if($stateParams.id) {
+    if(!$stateParams.add) {
         //carregar o char.
         Personagens.getById($stateParams.id).then(function (char) {
             vm.character = char;
