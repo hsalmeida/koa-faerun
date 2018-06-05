@@ -263,7 +263,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
     let vm = this;
     vm.character = {};
     $scope.newChar = false;
-    $scope.addNew = $stateParams.add;
+    $scope.addNew = Boolean($stateParams.add);
 
     if($stateParams.add === "false") {
         //carregar o char.
@@ -271,8 +271,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             vm.character = char;
         })
     }
-    console.log('$scope.addNew', $scope.addNew);
-
+    
     $scope.generateCharacter = function () {
         $scope.newChar = true;
         vm.character = new Personagens();
