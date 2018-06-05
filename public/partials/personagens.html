@@ -6,15 +6,24 @@
     <md-card pagination-id="characterList" dir-paginate="character in vm.characters | itemsPerPage: 20 : 'characterList'">
 
         <md-card-header>
-            <md-card-header-text>
-                <span class="md-title">{{character.name}}</span>
-                <span class="md-subhead">fei/5 mng/4 brd/4</span>
+            <md-card-header-text layout="column">
+                <span class="md-title">{{character.name}} [{{character.hp}}]</span>
+                <span class="md-subhead">
+                    <p>{{character.race}} {{character.gender === 'F' ? 'Feminino' : 'Masculino'}} Nivel: {{character.level}} [{{character.power}}]</p>
+                    <span>
+                        <span ng-repeat="cl in character.classes"><span ng-if="!$first">&nbsp;</span>{{cl.cl.nome}}/{{cl.qtd}}</span>
+                    </span>
+                </span>
             </md-card-header-text>
+            <md-card-title-media ng-if="character.primaryClass">
+                <div class="md-media-sm card-media">
+                    <img style="width: 50px;" ng-src="public/app/dist/img/{{character.primaryClass}}.jpeg" class="md-avatar character-avatar" alt="{{character.name}}"/>
+                </div>
+            </md-card-title-media>
         </md-card-header>
 
         <md-card-actions layout="row" layout-align="end center">
-            <md-button>Ver</md-button>
-            <md-button>Administrar</md-button>
+            <md-button ng-click="detalhes(character);">Ver</md-button>
         </md-card-actions>
     </md-card>
     <dir-pagination-controls pagination-id="characterList"></dir-pagination-controls>

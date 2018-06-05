@@ -1,10 +1,21 @@
-angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$state', '$stateParams', 'Tables', function ($scope, $state, $stateParams, Tables) {
+angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$state', '$stateParams', 'Tables', 'Personagens', function ($scope, $state, $stateParams, Tables, Personagens) {
     let vm = this;
     vm.character = {};
-    $scope.add = $stateParams.add;
+    $scope.newChar = false;
+    $scope.addNew = $stateParams.add;
+
+    if($stateParams.id) {
+        //carregar o char.
+        Personagens.getById($stateParams.id).then(function (char) {
+            vm.character = char;
+        })
+    }
+    console.log('$scope.addNew', $scope.addNew);
 
     $scope.generateCharacter = function () {
-        vm.character = {
+        $scope.newChar = true;
+        vm.character = new Personagens();
+        angular.extend(vm.character, {
             name: '',
             race: '',
             gender: '',
@@ -28,7 +39,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             items: [],
             power: 0,
             hp: 0
-        };
+        });
         vm.character.level = getRandomInt(6, 17);
 
         vm.character.appearance = Tables.aparencia[getRandomInt(0, Tables.aparencia.length)];
@@ -151,7 +162,9 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
     };
 
     $scope.saveCharacter = function () {
-
+        vm.character.$saveOrUpdate().then(function () {
+            $scope.newChar = false;
+        });
     };
 
     function getRandomInt(min, max) {

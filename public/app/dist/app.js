@@ -1,16 +1,22 @@
-angular.module("koa-fearun", ["ngMaterial", "ngMessages", "ngSanitize", "ui.router", "angular.filter", "angularMoment", "angularUtils.directives.dirPagination"])
+angular.module("koa-fearun", ["ngMaterial", "ngMessages", "ngSanitize", "ui.router", "angular.filter", "angularMoment", "angularUtils.directives.dirPagination", "mongolabResourceHttp"])
     .run(['amMoment', function (amMoment) {
         amMoment.changeLocale('pt-br');
     }])
     .config(["paginationTemplateProvider", function (paginationTemplateProvider) {
         paginationTemplateProvider.setPath('public/vendor/angularUtils-pagination/dirPagination.tpl.html');
     }])
+    .constant('MONGOLAB_CONFIG', {API_KEY: 'YXgR-q92vuVCKlSm-ji3nplDTE7rHIQh', DB_NAME: 'koa'})
     .config(["$mdDateLocaleProvider", function ($mdDateLocaleProvider) {
         $mdDateLocaleProvider.formatDate = function(date) {
             let m = moment(date);
             return m.isValid() ? m.format('L') : '';
         };
     }]);
+angular.module('koa-fearun')
+    .factory('Personagens',["$mongolabResourceHttp", function($mongolabResourceHttp){
+        return $mongolabResourceHttp('personagens');
+    }]);
+
 angular.module("koa-fearun").factory('Tables', function () {
     return {
         racas: [
@@ -247,13 +253,30 @@ angular.module("koa-fearun").controller('HomeController', ['$scope', function ($
         concluido: 0
     });
 }]);
-angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$state', '$stateParams', 'Tables', function ($scope, $state, $stateParams, Tables) {
+angular.module("koa-fearun").controller('LoginController', ['$scope','$state', function ($scope, $state) {
+    let vm = this;
+    vm.submit = function(login) {
+        $state.go('workspace.home')
+    };
+}]);
+angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$state', '$stateParams', 'Tables', 'Personagens', function ($scope, $state, $stateParams, Tables, Personagens) {
     let vm = this;
     vm.character = {};
-    $scope.add = $stateParams.add;
+    $scope.newChar = false;
+    $scope.addNew = $stateParams.add;
+
+    if($stateParams.id) {
+        //carregar o char.
+        Personagens.getById($stateParams.id).then(function (char) {
+            vm.character = char;
+        })
+    }
+    console.log('$scope.addNew', $scope.addNew);
 
     $scope.generateCharacter = function () {
-        vm.character = {
+        $scope.newChar = true;
+        vm.character = new Personagens();
+        angular.extend(vm.character, {
             name: '',
             race: '',
             gender: '',
@@ -277,7 +300,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             items: [],
             power: 0,
             hp: 0
-        };
+        });
         vm.character.level = getRandomInt(6, 17);
 
         vm.character.appearance = Tables.aparencia[getRandomInt(0, Tables.aparencia.length)];
@@ -400,7 +423,9 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
     };
 
     $scope.saveCharacter = function () {
-
+        vm.character.$saveOrUpdate().then(function () {
+            $scope.newChar = false;
+        });
     };
 
     function getRandomInt(min, max) {
@@ -409,42 +434,21 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         return Math.floor(Math.random() * (max - min)) + min;
     }
 }]);
-angular.module("koa-fearun").controller('PersonagensController', ['$scope', '$state', function ($scope, $state) {
+angular.module("koa-fearun").controller('PersonagensController', ['$scope', '$state', 'Personagens', function ($scope, $state, Personagens) {
     let vm = this;
     vm.characters = [];
-    for (let i = 0; i < 8; i++) {
-        vm.characters.push({
-            name: 'Exemplo de Personagem ' + i,
-            race: 'Dragonborn',
-            primaryClass: '',
-            level: 0,
-            strength: 0,
-            dexterity: 0,
-            constitution: 0,
-            intelligence: 0,
-            wisdom: 0,
-            charisma: 0,
-            strengthModifier: 0,
-            dexterityModifier: 0,
-            constitutionModifier: 0,
-            intelligenceModifier: 0,
-            wisdomModifier: 0,
-            charismaModifier: 0,
-            classes: [],
-            appearance: '',
-            maneirism: '',
-            items: []
-        });
-    }
+
+    Personagens.all().then(function (characters) {
+        vm.characters = characters;
+    });
+
     $scope.addPerson = function () {
         $state.go('workspace.character', {add: true, id: 0})
     };
-}]);
-angular.module("koa-fearun").controller('LoginController', ['$scope','$state', function ($scope, $state) {
-    let vm = this;
-    vm.submit = function(login) {
-        $state.go('workspace.home')
-    };
+
+    $scope.detalhes = function (character) {
+        $state.go('workspace.character', {add: false, id: character._id.$oid});
+    }
 }]);
 angular.module("koa-fearun")
     .directive('koaNavbar', [function () {

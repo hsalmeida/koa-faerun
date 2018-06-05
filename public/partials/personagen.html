@@ -1,10 +1,10 @@
 <div ng-cloak>
     <div layout="row">
-    <md-button class="md-raised md-primary" ng-if="add" ng-click="generateCharacter();">
+    <md-button class="md-raised md-primary" ng-if="addNew" ng-click="generateCharacter();">
         <md-icon class="material-icons">supervisor_account</md-icon>&nbsp;Gerar aleatorio
     </md-button>
-    <md-button class="md-raised md-primary" ng-if="vm.character.name" ng-click="saveCharacter();" ng-disabled="true">
-        <md-icon class="material-icons">save</md-icon>&nbsp;Salvar
+    <md-button class="md-raised md-primary" ng-click="saveCharacter();" ng-disabled="!vm.character.name || !newChar">
+        <md-icon class="material-icons">save</md-icon>&nbsp;Salvar Novo
     </md-button>
     </div>
     <md-card>
