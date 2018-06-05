@@ -5,7 +5,7 @@
     <dir-pagination-controls pagination-id="characterList"></dir-pagination-controls>
     <md-card pagination-id="characterList" dir-paginate="character in vm.characters | itemsPerPage: 20 : 'characterList'">
 
-        <md-card-header>
+        <md-card-title>
             <md-card-title-text layout="column">
                 <span class="md-title">{{character.name}} [{{character.hp}}]</span>
                 <span class="md-subhead">
@@ -20,7 +20,7 @@
                     <img style="width: 50px;" ng-src="public/app/dist/img/{{character.primaryClass}}.jpeg" class="md-avatar character-avatar" alt="{{character.name}}"/>
                 </div>
             </md-card-title-media>
-        </md-card-header>
+        </md-card-title>
 
         <md-card-actions layout="row" layout-align="end center">
             <md-button ng-click="detalhes(character);">Ver</md-button>
