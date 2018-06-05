@@ -10,14 +10,14 @@
                 <span class="md-title">{{character.name}} [{{character.hp}}]</span>
                 <span class="md-subhead">
                     <p>{{character.race}} {{character.gender === 'F' ? 'Feminino' : 'Masculino'}} Nivel: {{character.level}} [{{character.power}}]</p>
-                    <span>
+                    <span style="word-break:  break-all;">
                         <span ng-repeat="cl in character.classes"><span ng-if="!$first">&nbsp;</span>{{cl.cl.nome}}/{{cl.qtd}}</span>
                     </span>
                 </span>
             </md-card-title-text>
             <md-card-title-media ng-if="character.primaryClass">
                 <div class="md-media-sm card-media">
-                    <img style="width: 50px;" ng-src="public/app/dist/img/{{character.primaryClass}}.jpeg" class="md-avatar character-avatar" alt="{{character.name}}"/>
+                    <img style="float: right;width: 50px;" ng-src="public/app/dist/img/{{character.primaryClass}}.jpeg" class="md-avatar character-avatar" alt="{{character.name}}"/>
                 </div>
             </md-card-title-media>
         </md-card-title>
