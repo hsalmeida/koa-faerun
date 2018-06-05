@@ -52,7 +52,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         vm.character.wisdom = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
         vm.character.charisma = getRandomInt(8, 19) + (vm.character.lv >= 10 ? 1 : 0);
 
-        vm.character.gender = getRandomInt(0, 2) === 0 ? "M" : "F";
+        vm.character.gender = getRandomInt(1, 11) > 3 ? "M" : "F";
         const racas = Tables.racas;
         let tempraca = racas[getRandomInt(0, racas.length)];
         vm.character.race = tempraca.nome;
