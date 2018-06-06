@@ -263,7 +263,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
     let vm = this;
     vm.character = {};
     $scope.newChar = false;
-    $scope.addNew = Boolean($stateParams.add);
+    $scope.addNew = $stateParams.add;
 
     if($stateParams.add === "false") {
         //carregar o char.
@@ -271,7 +271,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             vm.character = char;
         })
     }
-    
+
     $scope.generateCharacter = function () {
         $scope.newChar = true;
         vm.character = new Personagens();
@@ -382,6 +382,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             vm.character.items.push({tabela: it.tabela, poder: it.valores[coluna], nome: itStr});
         }
 
+        /*
         vm.character.power += (Tables.lvs[(vm.character.level - 6)].mod +
             vm.character.strengthModifier +
             vm.character.dexterityModifier +
@@ -389,19 +390,44 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
             vm.character.intelligenceModifier +
             vm.character.wisdomModifier +
             vm.character.charismaModifier);
+        */
+        vm.character.power += (Tables.lvs[(vm.character.level - 6)].mod);
+        vm.character.power += (vm.character.constitutionModifier * 2);
+        vm.character.power += (vm.character.strengthModifier +
+        vm.character.dexterityModifier +
+        vm.character.intelligenceModifier +
+        vm.character.wisdomModifier +
+        vm.character.charismaModifier);
 
-        const attrs = vm.character.classes[0].cl.atributos;
-        for(let a = 0; a < attrs.length; a++) {
-            vm.character.power += vm.character[attrs[a] + 'Modifier'];
+        //verificar maior classe ou se classe unica
+        let maiorClasse = vm.character.classes[0];
+        if(!singleClass) {
+            for(let q = 0; q < vm.character.classes.length; q++) {
+                if(vm.character.classes[q].qtd >= 4) {
+                    vm.character.power += 3;
+                }
+                if(vm.character.classes[q].qtd > maiorClasse.qtd) {
+                    maiorClasse = vm.character.classes[q];
+                }
+            }
         }
+
+        const attrs = maiorClasse.cl.atributos;
+        let maiorModificador = vm.character[attrs[0] + 'Modifier'];
+        if(attrs.length > 1) {
+            for (let a = 0; a < attrs.length; a++) {
+                if(vm.character[attrs[a] + 'Modifier'] > maiorModificador) {
+                    maiorModificador = vm.character[attrs[a] + 'Modifier'];
+                }
+            }
+        }
+        vm.character.power += (maiorModificador * 3);
 
 
         let templv = 1;
-        let tempclmod = 0;
         vm.character.hp = 0;
         for(let i = 0; i < vm.character.classes.length; i++) {
             for(let b = 0; b < vm.character.classes[i].qtd; b++) {
-                tempclmod += vm.character.classes[i].cl.mdv;
                 if(templv === 1 || templv === 5 || templv === 10 || templv === 15) {
                     vm.character.hp += vm.character.classes[i].cl.dv;
                 } else {
@@ -413,7 +439,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         }
 
         vm.character.hp += (vm.character.constitutionModifier * vm.character.level);
-        vm.character.power += Math.floor(tempclmod / vm.character.level);
+        vm.character.power += maiorClasse.cl.mdv;
 
         for(let j = 0; j < vm.character.items.length; j++) {
             vm.character.power += vm.character.items[j].poder;
@@ -433,6 +459,7 @@ angular.module("koa-fearun").controller('PersonagenController', ['$scope', '$sta
         return Math.floor(Math.random() * (max - min)) + min;
     }
 }]);
+
 angular.module("koa-fearun").controller('PersonagensController', ['$scope', '$state', 'Personagens', function ($scope, $state, Personagens) {
     let vm = this;
     vm.characters = [];
